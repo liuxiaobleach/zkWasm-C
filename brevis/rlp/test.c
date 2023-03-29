@@ -1,8 +1,7 @@
 #include "zkwasmsdk.h"
-#include "hash-wasm.h"
+#include "rlp.h"
 #include <stdint.h>
 #include <stddef.h>
-#include "rlp.h"
 
 struct rlpItemAllocator itemAllocator;
 
