@@ -7,7 +7,7 @@ CFILES = $(wildcard *.c)
 ifeq ($(CLANG),)
 CLANG=clang-15
 endif
-FLAGS = -flto -O3 -nostdlib -fno-builtin -ffreestanding -mexec-model=reactor --target=wasm32 -Wl,--strip-all -Wl,--initial-memory=131072 -Wl,--max-memory=131072 -Wl,--no-entry -Wl,--allow-undefined -Wl,--export-dynamic
+FLAGS = -flto -O3 -nostdlib -fno-builtin -ffreestanding -mexec-model=reactor --target=wasm32 -Wl,--strip-all -Wl,--initial-memory=131072 -Wl,--max-memory=1310720 -Wl,--no-entry -Wl,--allow-undefined -Wl,--export-dynamic
 
 all: output.wasm
 
