@@ -116,4 +116,4 @@ static __inline__ void memset128(void *dst, const uint8_t value)
 
 void SHA256_Digest(uint8_t *output, uint32_t size, const uint8_t *msg);
 
-int sha3_256(uint8_t* M, int l, uint8_t* O)
+int sha3_256(uint8_t* M, int l, uint8_t* O);
