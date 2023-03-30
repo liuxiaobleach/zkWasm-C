@@ -14,7 +14,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-if ! wasm_opt_loc="$(type -p "wasm-opt")" || [[ -z wasm_opt_loc ]]; then
+if ! wasm_opt_loc="$(type -p "wasm-opt")" || [[ -z $wasm_opt_loc ]]; then
     echo "No wasm-opt provided"
     exit 1
 fi
