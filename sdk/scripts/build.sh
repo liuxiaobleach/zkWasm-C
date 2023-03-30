@@ -14,6 +14,11 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+if ! wasm_opt_loc="$(type -p "wasm-opt")" || [[ -z wasm_opt_loc ]]; then
+    echo "No wasm-opt provided"
+    exit 1
+fi
+
 make -C $TOP_PATH/c/sdk/lib -f $MAKEFILE
 make -C $TOP_PATH/c/rlp/lib -f $MAKEFILE
 make -C $TOP_PATH/c/hash/lib -f $MAKEFILE
